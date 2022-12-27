@@ -18,19 +18,22 @@
 <body>
     <!-- 헤더 -->
     <header>
+        <!-- 사이드 내비게이션 -->
+        <nav id="SideNavigation">
+            <span onclick="openNav()">&#9776;</span>
+        </nav>
+        <!-- 블로그 제목 -->
         <h1><b>Insight Day</b></h1>
-        <p>멋쟁이사자처럼 AI School 8기<span>재벌집 둘째들</span></p>
+        <!-- 내비게이션 바 -->
+        <nav id="NavigationBar">
+            <a href="./page/til.html">오늘 배운 것은?</a>
+            <a href="#study">자기주도학습</a>
+            <a href="#share">정보 공유</a>
+        </nav>
+        <!-- theme 다크모드 -->
+        <input type="button" value="Theme" onclick="Theme()"
     </header>
-
-    <!-- 내비게이션 바 -->
-    <nav id="NavigationBar">
-        <span onclick="openNav()">&#9776;</span>
-        <a href="index.html">Home</a>
-        <a href="./page/til.html">오늘 배운 것은?</a>
-        <a href="#study">자기주도학습</a>
-        <a href="#share">정보 공유</a>
-    </nav>
-
+    
     <!-- Footer -->
     <footer>
         <p>Notion page <a href="https://www.notion.so/likelion-aischool/AI-SCHOOL-8-b93bee5a6c4d49ab83a024d1ad5222d4"
