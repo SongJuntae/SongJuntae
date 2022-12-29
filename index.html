@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../blog/css/external_style_sheet.css">
     <!-- Javascript -->
     <script src="../blog/script/external_javascript.js"></script>
-    <!-- PyScript -->
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 
 <!-- 바디 -->
@@ -34,21 +32,16 @@
         <!-- theme 낮 모드 -->
         <input type="checkbox" id="checkbox" class="checkbox" onclick="Theme()" placeholder="button">
         <label for="checkbox" class="checkbox_label">
-            <div class='ball'></div>
+            <div class='checkbox_ball'></div>
     </header>
     <!-- 프로필 -->
     <address id="profile">
-        <iframe id="ProfileImage" src="https://www.youtube.com/embed/18OYMT2qUSY" title="재즈를 뭐라고 생각하세요?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="ProfileImage" src="https://www.youtube.com/embed/58glOZGj7BY" title="잘 있어요 - 아따맘마 1기 오프닝 [FHD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- <img id="ProfileImage" alt="ProfileImage" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg"> -->
         <img id="github-contribution" alt="github-contribution" src="https://ghchart.rshah.org/SongJuntae" />
         <figcaption id="hello">안녕하세요.<br>AI School 8기<br>2조 재벌집 둘째들<br>팀원 송준태</figcaption>
     </address>
-    <!-- 파이스크립트 -->
-    <py-config>
-        [[fetch]]
-        files = ["../blog/pyscript/external_pyscript.py"]
-    </py-config>
-    <p id="time"></p>
+
     <!-- Footer -->
     <footer>
         <p>Notion page <a href="https://www.notion.so/likelion-aischool/AI-SCHOOL-8-b93bee5a6c4d49ab83a024d1ad5222d4"
