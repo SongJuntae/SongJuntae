@@ -18,7 +18,7 @@ header {
     height: 5rem;
 }
 
-address {
+section {
     align-items: center;
     justify-items: center;
     align-content: center;
@@ -71,6 +71,10 @@ a {
 
 /* ======================================================================================================================== 낮 모드 토글 끝*/
 /* ======================================================================================================================== 프로필 시작*/
+#ProfileTitle {
+    display: none;
+}
+
 #profile {
     display: grid;
     grid-template-columns: 15rem max-content;
