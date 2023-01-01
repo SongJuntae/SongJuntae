@@ -45,7 +45,11 @@
         <p id="hello">안녕하세요.<br>AI School 8기<br>2조 재벌집 둘째들<br>팀원 송준태</p>
     </section>
     <!-- 글목록 -->
+    <article></article>
+    <input type="button" value="hello" onclick="alert('hi')">
+    <input type="button" value="fetch" onclick="fetch('data/TodayILearned/2022-12-19.json').then(function(response){response.text().then(function(text){document.querySelector('article').innerHTML = text;})})">
     <!-- 내용 -->
+
     <!-- Footer -->
     <footer>
         <p>Notion page <a href="https://www.notion.so/likelion-aischool/AI-SCHOOL-8-b93bee5a6c4d49ab83a024d1ad5222d4"
