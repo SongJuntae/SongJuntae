@@ -53,27 +53,6 @@
         <p>Notion page <a href="https://www.notion.so/likelion-aischool/AI-SCHOOL-8-b93bee5a6c4d49ab83a024d1ad5222d4"
                 target="_blank">링크</a></p>
     </footer>
-    <script>
-        const pickerjsons = {
-            types: [
-                {
-                    description: 'json',
-                    accept: {
-                        'data/*': ['.json']
-                    }
-                }
-            ],
-            excludeAcceptAllOption: true,
-            multiple: true
-        };
-
-        let fileHandle;
-
-        async function getFile() {
-            [fileHandle] = await window.showOpenFilePicker(pickerjsons);
-        }
-    </script>
-    <input type="button" value="getfile" onclick="getFile()">
 </body>
 
 </html>
