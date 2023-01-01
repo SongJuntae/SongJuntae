@@ -1,0 +1,49 @@
+{
+    "title": "오늘 배운 것은?",
+    "description": "",
+    "type": "",
+    "subject": "",
+    "source": "",
+    "relation": "",
+    "coverage": "",
+    "creator": "송준태",
+    "publisher": "",
+    "right": "",
+    "contributor": "",
+    "date": "",
+    "format": "",
+    "identifier": "",
+    "language": "",
+    "data": [
+        {
+            "title": "오리엔테이션",
+            "date": "2022-12-19",
+            "creator": "송준태",
+            "url": "data/TodayILearned/12/2022-12-19"
+        },
+        {
+            "title": "일단 만드는 PYTHON",
+            "date": "2022-12-20",
+            "creator": "송준태",
+            "url": "data/TodayILearned/12/2022-12-20"
+        },
+        {
+            "title": "[기초] 같이 푸는 python",
+            "date": "2022-12-20",
+            "creator": "송준태",
+            "url": "data/TodayILearned/12/2022-12-21"
+        },
+        {
+            "title": "[심화] 같이 푸는 PYTHON",
+            "date": "2022-12-20",
+            "creator": "송준태",
+            "url": "data/TodayILearned/12/2022-12-22"
+        },
+        {
+            "title": "오리엔테이션",
+            "date": "2022-12-20",
+            "creator": "송준태",
+            "url": "data/TodayILearned/12/2022-12-23"
+        }
+    ]
+}
