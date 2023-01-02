@@ -13,7 +13,6 @@ function fetchListOfPosts(url) {
                 const li = document.createElement("li");
                 li.textContent = text['data'][i]['title'] + ' ' + text['data'][i]['creator'] + ' ' + text['data'][i]['date'];
                 ol.appendChild(li);
-                console.log(text['data'][i]['title']);
             }
         })
     })
