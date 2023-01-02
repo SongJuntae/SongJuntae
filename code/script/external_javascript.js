@@ -5,5 +5,21 @@ function Theme() {
     element.classList.toggle("day-mode")
 }
 
+function fetchListOfPosts(url) {
+    fetch(url).then(function (reponse) {
+        reponse.json().then(function (text) {
+            for (var i in [...Array(text['data'].length).keys()]) {
+                const ol = document.querySelector("ol");
+                const li = document.createElement("li");
+                li.textContent = text['data'][i]['title'] + ' ' + text['data'][i]['creator'] + ' ' + text['data'][i]['date'];
+                ol.appendChild(li);
+                console.log(text['data'][i]['title']);
+            }
+        })
+    })
+}
 // ======================================================================================================================== 낫 모드 토글 끝
+// ======================================================================================================================== test 시작
+// '<pre>' + text['data'][0]['title'] + '&nbsp' + text['data'][0]['creator'] + '&nbsp' + text['data'][0]['date'] + '</pre>';
+// ======================================================================================================================== test 끝
 // ======================================================================================================================== 내가 만든 javascript 끝
