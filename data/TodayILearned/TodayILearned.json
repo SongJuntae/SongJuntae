@@ -19,31 +19,37 @@
             "title": "오리엔테이션",
             "date": "2022-12-19",
             "creator": "송준태",
-            "identifier": "data/TodayILearned/2022-12/2022-12-19"
+            "identifier": "data/TodayILearned/2022-12/2022-12-19.html"
         },
         {
             "title": "일단 만드는 PYTHON",
             "date": "2022-12-20",
             "creator": "송준태",
-            "identifier": "data/TodayILearned/2022-12/2022-12-20"
+            "identifier": "data/TodayILearned/2022-12/2022-12-20.html"
         },
         {
             "title": "[기초] 같이 푸는 python",
-            "date": "2022-12-20",
+            "date": "2022-12-21",
             "creator": "송준태",
-            "identifier": "data/TodayILearned/2022-12/2022-12-21"
+            "identifier": "data/TodayILearned/2022-12/2022-12-21.html"
         },
         {
             "title": "[심화] 같이 푸는 PYTHON",
-            "date": "2022-12-20",
+            "date": "2022-12-22",
             "creator": "송준태",
-            "identifier": "data/TodayILearned/2022-12/2022-12-22"
+            "identifier": "data/TodayILearned/2022-12/2022-12-22.html"
         },
         {
             "title": "데이터 분석 관련 IT 용어 정리",
-            "date": "2022-12-20",
+            "date": "2022-12-23",
             "creator": "송준태",
-            "identifier": "data/TodayILearned/12/2022-12-23"
+            "identifier": "data/TodayILearned/2022-12/2022-12-23.html"
+        },
+        {
+            "title": "박두진 강사님의 파이썬 강의",
+            "date": "2023-1-1",
+            "creator": "송준태",
+            "identifier": "data/TodayILearned/2023-1/2023-1-1.html"
         }
     ]
 }
