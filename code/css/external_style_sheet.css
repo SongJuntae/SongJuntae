@@ -37,18 +37,13 @@ a {
     cursor: pointer;
 }
 
-li {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: left;
-    justify-content: left;
-}
-
 img {
     display: grid;
-    width: 50vw;
     object-fit: scale-down;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 /* ======================================================================================================================== 태그 끝 */
