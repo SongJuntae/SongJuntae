@@ -34,6 +34,21 @@ article {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: left;
+    justify-content: left;
+}
+
+img {
+    display: grid;
+    width: 50vw;
+    object-fit: scale-down;
 }
 
 /* ======================================================================================================================== 태그 끝 */
