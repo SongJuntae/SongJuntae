@@ -63,4 +63,44 @@
     
     # map()
     # iterable한 데이터의 모든 value에 특정 함수를 적용한 결과를 리스트로 출력
+
+    # Quiz. map 함수 직접 구현
+    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
+    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
+
+    def map_func():
+        # TODO
+
+    def ages(data):
+        return data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')'
+
+    map_func(ages, names1)
+
+    def ages(*args):
+        return [data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')' for data in args]
+
+    map_func(ages, names1, names2)
+
+    # 답
+    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
+    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
+
+    def map_func(function,*args):
+        return [function(i) for i in args]
+
+    def ages(data):
+        return data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')'
+
+    map_func(ages,*names1)
+
+    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
+    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
+
+    def map_func(function,*args):
+        return [function(*i) for i in args]
+
+    def ages(*args):
+        return [data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')' for data in args]
+
+    map_func(ages,names1,names2)
 </pre>
