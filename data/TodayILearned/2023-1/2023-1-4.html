@@ -1,0 +1,66 @@
+<b>PYTHON</b>
+
+<P>
+    박두진 강사님의 파이썬 강의
+</P>
+
+<pre>
+    # docstring
+    # 함수의 설명을 작성 : 함수선언코드 바로 아래에 멀티라인 문자열로 작성
+    # help() 함수로 docstring 출력
+
+    def plus(*args, **kwargs): # 파라미터에 컬렉션 데이터 타입을 받아줌 : 식별자1개, 데이터n개
+    print(type(args), args)
+    print(type(kwargs), kwargs)
+    # return n1 + n2
+
+    # 키워드 아규먼트는 키워드가 없는 아규먼트 뒤에 사용
+    # 디폴트 파라미터는 디폴트 값이 없는 파라미터 뒤에 사용
+    plus(1, 2, 3, 4, 5, n1=10, n2=30) # 여러개의 아규먼트
+
+    # *args, **kwargs : 아규먼트에서 사용
+    # 파라미터 사용 : 여러개의 아규먼트 > 컬렉션 데이터타입(tuple,dict)으로 묶어줌
+    # 아규먼트 사용 : 컬렉션 데이터타입(list,tuple,dict) > 여러개의 아규먼트로 풀어줌
+
+    def plus(*args, **kwargs): # 파라미터에 컬렉션 데이터 타입을 받아줌 : 식별자1개, 데이터n개
+    print(type(args), args)
+    print(type(kwargs), kwargs)
+    return sum(args) + sum(kwargs.values())
+
+    # 키워드 아규먼트는 키워드가 없는 아규먼트 뒤에 사용
+    # 디폴트 파라미터는 디폴트 값이 없는 파라미터 뒤에 사용
+    plus(1, 2, 3, 4, 5, n1=10, n2=30) # 여러개의 아규먼트
+
+    # *args, **kwargs
+    # parameter
+    #   - 여러개의 아규먼트 > 하나의 컬렉션 데이터타입(tuple,dict)으로 묶어서 받아줌
+    #   - *args : 키워드가 없는 여러개의 아규먼트를 받음 : tuple
+    #   - **kwargs : 키워드가 있는 여러개의 아규먼트를 받음 : dict
+    # argument
+    #   - 묶여있는 컬렉션 데이터타입(list,tuple,dict) > 여러개의 아규먼트로 풀어서 함수호출
+    #   - *args : list, tuple 데이터타입의 데이터를 여러개의 키워드가 없는 아규먼트로 풀어줌
+    #   - **kwargs : dict 데이터타입의 데이터를 여러개의 키워드가 있는 아규먼트로 풀어줌
+
+    # 데이터베이스 접속 함수
+    def connect(**kwargs):
+        print('connect : ', kwargs['host'], kwargs['user'], kwargs['pw'])
+
+    # 지역영역에서 사용되는 변수(식별자)는 지역영역 없으면, 전역영역의 변수를 가져와서 사용
+
+    # return : 전역영역에서 지역영역의 변수 사용하는 방법
+
+    # lambda 함수
+    # 일회성 함수로 간단한 함수(파라미터,리턴)를 함수 선언 없이 사용 가능 > 메모리절약, 가독성증대
+
+    # 함수는 데이터 타입이 function인 변수이다.
+    # function은 코드를 담고 있는 데이터타입이다.
+
+    # lambda 함수 : 간단한 함수를 함수 선언 없이 사용 가능
+
+    # list comprehension : 리스트 컴프리헨션
+    # 간단한 반복문, 조건문을 사용해서 리스트 데이터를 만들때 사용하는 문법
+    # 주로 리스트 데이터를 필터링 하거나 데이터를 변경할때 사용
+    
+    # map()
+    # iterable한 데이터의 모든 value에 특정 함수를 적용한 결과를 리스트로 출력
+</pre>
