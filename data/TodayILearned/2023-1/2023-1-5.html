@@ -28,7 +28,76 @@
 # class, self, 사용자 정의 데이터 타입, spacial methods(__init__(), __add__() ...)
 # 상속, super, getter-setter, mangling, 메서드의 종류들(인스턴스,클래스,스태틱)
 
+# 클래스선언 : 코드작성
 
+# 객체생성 : 메모리사용
+
+# dir() : 객체에 들어있는 변수를 출력
+
+# 메서드실행
+
+# 스페셜 메서드
+# 특별한 기능을 하는 메서드 : 앞뒤로 __를 붙임
+
+# 생성자 메서드 : __init__()
+# 객체를 생성할때 실행되는 메서드
+# 변수의 초기값을 설정할때 주로 사용
+# 불량 객체(메서드 사용 X)가 만들어질 확률을 줄여줌
+
+# 클래스생성 : 설계도작성
+
+# account의 데이터 타입은 Account
+# account 객체가 만들어진 클래스는 Account
+# 데이터 타입 == 클래스 > 클래스는 데이터 타입이다.
+# Account 클래스는 우리가 만듦 > 사용자 정의
+# > 클래스는 사용자 정의 데이터 타입이다.
+type(account)
+
+# data의 데이터 타입은 list
+# data 객체가 만들어진 클래스는 list
+# list 클래스는 우리가 만들지 X
+data = [1, 2, 3]
+type(data)
+
+# account의 메서드는 Account 클래스에서 정의
+# data의 메서드는 list 클래스에서 정의
+[var for var in dir(account) if var[0] != '_']
+
+# account.insert(), data.sort(), data.append()
+# 데이터 타입의 메서드를 암기할 필요 X
+print([var for var in dir(data) if var[0] != '_'])
+
+# 객체의 데이터 타입에 따라서 사용할수 있는 변수, 메서드가 다르다.
+data1, data2 = 'python', [1, 2, 3]
+print(type(data1), type(data2))
+print([var for var in dir(data1) if var[0] != '_'])
+print([var for var in dir(data2) if var[0] != '_'])
+
+# account : 클래스, 데이터타입 : Account : 사용자 정의 데이터 타입 O
+# data1 : 클래스, 데이터타입 : str : 사용자 정의 데이터 타입 X
+# data2 : 클래스, 데이터타입 : list : 사용자 정의 데이터 타입 X
+type(account), type(data1), type(data2)
+
+# 상속
+# 다른 클래스의 변수(메서드)를 가져와서 사용하는 방법
+
+# 다중상속
+class Human:
+    def walk(self):
+        print('walking!')
+
+class Korean:
+    def eat(self):
+        print('eat kimchi!')
+
+class Indian:
+    def eat(self):
+        print('eat curry!')
+        
+# Human > Korean > Jin
+class Anchel(Indian, Human):
+    def skill(self):
+        print('speak english!')
 
 # 데코레이터 : decorator
 # 함수에서 중복되는 코드를 빼서 데코레이터 함수로 만들어 코드를 작성하는 방법
