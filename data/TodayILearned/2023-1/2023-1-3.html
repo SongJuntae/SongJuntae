@@ -1,42 +1,73 @@
 <pre>
     박두진 강사님의 파이썬 강의
 
+    이전 강의 요약
+        summary
+        파이썬 문법 : 컴퓨터의 CPU, RAM, SSD(HDD)를 활용
+        1. 변수선언 : RAM을 사용하는 방법
+            - 식별자규칙 : 대소문자, 숫자, _ 만 사용가능 : 가장 앞에 숫자 X : 예약어 사용 X : snake_case
+            - 식별자 1개, 데이터 1개 : 식별자 n개, 데이터 n개 : 식별자 n개, 데이터 1개
+        2. 데이터타입 : RAM을 효율적으로 사용하는 방법
+            - 기본 : int, float, bool, str : 동적타이핑
+            - 컬렉션 : list, tuple, dict, set : 식별자 1개, 데이터 n개
+                - CRUD
+                    - create : list([]), tuple(()), dict({}), set(set())
+                    - read : masking : data[] : [idx], [key], [start:end], [start:end:stride]
+                    - update : 데이터선택 = 수정할데이터
+                    - delete : del 데이터선택
+                - tuple을 사용하는 이유 : 같은 데이터를 저장할때 list보다 tuple이 저장공간 적게 사용
+                - 깊은복사(데이터복사), 얕은복사(주소값복사)
+            - 식별자의 속성을 출력하는 함수 : print(), type(), sys.getsizeof(), id()
+            - random.randint(), len(), input()
+
+    오늘 강의 요약
+        summary
+        3. 연산자
+            - CPU를 사용하는 문법
+            - 산술 : +, -, *, /, //, %, ** : 데이터 + 데이터 = 데이터
+            - 할당 : 식별자 <산술>= 데이터
+            - 비교 : ==, !=, >, <, >=, <= : 데이터 + 데이터 = 논리값 : 조건1개
+            - 논리 : not, and(True), or(False) : 논리값 + 논리값 = 논리값 : 조건2개 이상
+            - 멤버 : in, not in : 컬렉션 데이터에 특정 데이터가 있는지 확인 : 결과 논리값
+        4. 조건문
+            - 특정 조건에 따라서 다른 코드를 실행하는 문법
+            - if, elif, else
+            - 조건을 확인하는 코드에서 데이터가 논리값(bool)이 아니면 bool() 형변환해서 확인
+        5. 반복문
+            - 특정 코드를 반복적으로 실행하는 문법
+            - while, for, break, continue, range(), enumerate(), zip()
+
+    퀴즈
+        Quiz 1. 년도를 입력받아 윤년이면 True, 아니면 False 출력하는 코드 작성
+        Quiz 2. fizzbuzz
+        Quiz 3. left shift
+
+    새로 접한 내용
+        데이터 규모에 따른 스킬들
+        엑셀 : 사용 간편 : 데이터 100만개 : 만들어진 기능만 사용가능 : 속도 느림
+        파이썬 : 파이썬문법 : 데이터 RAM 용량만큼 : 기능을 만들어서 사용가능 : 속도 빠름
+        파이썬 : 가상메모리 : DASK 
+        데이터베이스 : SQL문법 : 데이터 SSD(HDD) 용량만큼 : 속도 빠름
+        빅데이터 : 여러개의 컴퓨터를 1대의 컴퓨터처럼 사용 : SPARK : scala, python
+
+        3. 연산자 : CPU를 사용하는 방법
+            산술 : +, - < *, /, //, % < ** : 데이터(int,str,list) + 데이터 = 데이터
+            할당 : 식별자 <산술>= 데이터
+            비교 : ==, !=, >, <, >=, <= : 데이터 + 데이터 = 논리값
+            논리 : not, and, or : 논리값 + 논리값 = 논리값
+            멤버 : 특정 데이터가 컬렉션 데이터에 포함되었는지 확인 : 결과 논리값 출력
+        우선순위 and > or > not
+        and 는 두개의 조건이 모두 True이여야 True
+        or 는 두개의 조건중 하나만 True이여도 True
+        not False, not (True and False), False or True, (10 > 5) or (10 > 15)
+
+        실수 할만한 코드 2
+            해결방법 1 : 반올림으로 해결 : round()
+                print(round(data1 + data2, 1))
+                round(data1 + data2, 1) == 0.3
+            해결방법 2 : 고정소수점 연산
+                from decimal import Decimal
+                print(float(Decimal(str(data1)) + Decimal(str(data2))))
+                float(Decimal(str(data1)) + Decimal(str(data2))) == 0.3
+
 </pre>
-
-</P>
-
-<code>
-    # Quiz 1. 년도를 입력받아 윤년이면 True, 아니면 False 출력하는 코드 작성
-    # 4년에 한번씩 윤년 O
-    # 100년에 한번씩 윤년 X
-    # 400년에 한번씩 윤년 O
-    year = 2008 # True
-    year = 1900 # False
-    year = 2000 # True
-
-    % 400
-    % 100
-    % 4
-
-    # Quiz 2. fizzbuzz
-    # 3의 배수 : fizz, 5의배수 : buzz, 3과 5의 배수 : fizzbuzz 출력
-    # 위의 조건에 해당하지 않으면 data 출력
-    data = 17
-
-    % 3*5
-    % 3
-    % 5
-    else data
-
-    # Quiz 3. left shift
-    data = 'abcde'
-    shift = 3 # deabc
-
-    data = 'abcde'
-    shift = 3
-    data = list(data)
-    for i in range(shift):
-        data.insert(0,data.pop(-1))
-    data = ''.join(data)
-    data
-</code>
