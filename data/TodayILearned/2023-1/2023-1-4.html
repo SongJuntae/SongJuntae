@@ -1,106 +1,96 @@
-<b>PYTHON</b>
-
-<P>
-    박두진 강사님의 파이썬 강의
-</P>
-
 <pre>
-    # docstring
-    # 함수의 설명을 작성 : 함수선언코드 바로 아래에 멀티라인 문자열로 작성
-    # help() 함수로 docstring 출력
+    박두진 강사님의 파이썬 강의
 
-    def plus(*args, **kwargs): # 파라미터에 컬렉션 데이터 타입을 받아줌 : 식별자1개, 데이터n개
-    print(type(args), args)
-    print(type(kwargs), kwargs)
-    # return n1 + n2
+    이전 강의 요약
+        summary
+        3. 연산자
+            - CPU를 사용하는 문법
+            - 산술 : +, -, *, /, //, %, ** : 데이터 + 데이터 = 데이터
+            - 할당 : 식별자 <산술>= 데이터
+            - 비교 : ==, !=, >, <, >=, <= : 데이터 + 데이터 = 논리값 : 조건1개
+            - 논리 : not, and(True), or(False) : 논리값 + 논리값 = 논리값 : 조건2개 이상
+            - 멤버 : in, not in : 컬렉션 데이터에 특정 데이터가 있는지 확인 : 결과 논리값
+        4. 조건문
+            - 특정 조건에 따라서 다른 코드를 실행하는 문법
+            - if, elif, else
+            - 조건을 확인하는 코드에서 데이터가 논리값(bool)이 아니면 bool() 형변환해서 확인
+        5. 반복문
+            - 특정 코드를 반복적으로 실행하는 문법
+            - while, for, break, continue, range(), enumerate(), zip()
 
-    # 키워드 아규먼트는 키워드가 없는 아규먼트 뒤에 사용
-    # 디폴트 파라미터는 디폴트 값이 없는 파라미터 뒤에 사용
-    plus(1, 2, 3, 4, 5, n1=10, n2=30) # 여러개의 아규먼트
+    오늘 강의 요약
+        summary
+        6. function
+            반복되는 코드를 묶어서 사용 > 코드의 유지보수 향상
+            사용법 : 함수선언(코드작성) > 함수호출(코드실행)
+            def, return, argument, parameter, docstring, scope, global, lambda
+            argument, parameter : 함수호출하는 코드에서 함수선언하는 코드로 데이터를 전달
+                - default parameter, keyword argument
+                - *args, **kwargs
+                    - parameter : 여러개 아규먼트 > 하나의 변수(tuple,dict)로 묶어서 코드실행
+                    - argument : 하나의 변수(list,tuple,dict) > 여러개 아규먼트로 풀어서 코드실행(함수호출)
+            return : 함수를 실행한 결과를 변수에 저장 : 함수의 코드실행 중단
+            docstring : 함수의 설명글 작성 : 함수를 선언하는 코드 바로 아래에 멀티라인 문자열로 작성 : help()
+            scope : 함수안에서 선언(지역:local) : 함수밖에서 선언(전역:global)
+                - 지역영역에서 전역영역의 변수를 가져올때 : global
+                - 전역영역에서 지역영역의 변수를 가져올때 : return
+            lambda : 일회성 함수 : 간단한 함수(파라미터,리턴)를 함수 선언없이 함수의 기능을 사용가능
+        7. class
+            변수, 함수를 묶어서 코드를 작성하는 방법
+            객체지향 구현하는 문법
+                - 객체지향 : 실제세계를 모델링하여 프로그램을 개발하는 개발 방법론 : 협업을 용이하게 하기 위한
+            함수 사용법 : 함수선언(코드작성) > 함수호출(코드실행)
+            클래스 사용법
+                - 클래스선언(코드작성) > 객체생성(메모리사용) > 메서드실행(코드실행)
+                - 클래스선언(설계도작성) > 객체생성(제품생산) > 메서드실행(기능사용)
+            식별자 컨벤션
+                - 변수, 함수 : snake_case
+                - 클래스 : PascalCase, UpperCamelCase
+                class, self, 사용자 정의 데이터 타입, spacial methods(__init__(), __add__() ...)
+            상속, super, getter-setter, mangling, 메서드의 종류들(인스턴스,클래스,스태틱)
 
-    # *args, **kwargs : 아규먼트에서 사용
-    # 파라미터 사용 : 여러개의 아규먼트 > 컬렉션 데이터타입(tuple,dict)으로 묶어줌
-    # 아규먼트 사용 : 컬렉션 데이터타입(list,tuple,dict) > 여러개의 아규먼트로 풀어줌
+    퀴즈
+        Quiz. map 함수 직접 구현
 
-    def plus(*args, **kwargs): # 파라미터에 컬렉션 데이터 타입을 받아줌 : 식별자1개, 데이터n개
-    print(type(args), args)
-    print(type(kwargs), kwargs)
-    return sum(args) + sum(kwargs.values())
+    새로 접한 내용
+        *args, **kwargs
+        parameter
+          - 여러개의 아규먼트 > 하나의 컬렉션 데이터타입(tuple,dict)으로 묶어서 받아줌
+          - *args : 키워드가 없는 여러개의 아규먼트를 받음 : tuple
+          - **kwargs : 키워드가 있는 여러개의 아규먼트를 받음 : dict
+        argument
+          - 묶여있는 컬렉션 데이터타입(list,tuple,dict) > 여러개의 아규먼트로 풀어서 함수호출
+          - *args : list, tuple 데이터타입의 데이터를 여러개의 키워드가 없는 아규먼트로 풀어줌
+          - **kwargs : dict 데이터타입의 데이터를 여러개의 키워드가 있는 아규먼트로 풀어줌
 
-    # 키워드 아규먼트는 키워드가 없는 아규먼트 뒤에 사용
-    # 디폴트 파라미터는 디폴트 값이 없는 파라미터 뒤에 사용
-    plus(1, 2, 3, 4, 5, n1=10, n2=30) # 여러개의 아규먼트
+        데이터베이스 접속 함수
+            def connect(**kwargs):
+                print('connect : ', kwargs['host'], kwargs['user'], kwargs['pw'])
+            connect(host='1.2.3.5', user='python', pw='1234')
+            connect(host='1.2.3.5', user='python', pw='1234')
+            data = {'host': '1.2.3.6', 'user': 'python', 'pw': '1234'}
+            connect(host=data['host'], user=data['user'], pw=data['pw'])
+            connect(host=data['host'], user=data['user'], pw=data['pw'])
+            data = {'host': '1.2.3.6', 'user': 'python', 'pw': '1234'}
+            connect(host=data['host'], user=data['user'], pw=data['pw'])
+            connect(**data)
+            connect(**data)
 
-    # *args, **kwargs
-    # parameter
-    #   - 여러개의 아규먼트 > 하나의 컬렉션 데이터타입(tuple,dict)으로 묶어서 받아줌
-    #   - *args : 키워드가 없는 여러개의 아규먼트를 받음 : tuple
-    #   - **kwargs : 키워드가 있는 여러개의 아규먼트를 받음 : dict
-    # argument
-    #   - 묶여있는 컬렉션 데이터타입(list,tuple,dict) > 여러개의 아규먼트로 풀어서 함수호출
-    #   - *args : list, tuple 데이터타입의 데이터를 여러개의 키워드가 없는 아규먼트로 풀어줌
-    #   - **kwargs : dict 데이터타입의 데이터를 여러개의 키워드가 있는 아규먼트로 풀어줌
+        함수는 데이터 타입이 function인 변수이다.
+        function은 코드를 담고 있는 데이터타입이다.
 
-    # 데이터베이스 접속 함수
-    def connect(**kwargs):
-        print('connect : ', kwargs['host'], kwargs['user'], kwargs['pw'])
+        map()
+            iterable한 데이터의 모든 value에 특정 함수를 적용한 결과를 리스트로 출력
 
-    # 지역영역에서 사용되는 변수(식별자)는 지역영역 없으면, 전역영역의 변수를 가져와서 사용
+    자기주도학습
+        자기주도학습 링크
+        구글 액셀에 정리
+            파이썬 프로그래밍
+                박두진 강사님 강의
+                강의 퀴즈 풀기
+            블로그 업데이트
+                박두진 강사님 강의 파일 만들기
+                글목록 개선(grid 제목 글쓴이 날짜 따로)
+                javascript paging 방법
 
-    # return : 전역영역에서 지역영역의 변수 사용하는 방법
-
-    # lambda 함수
-    # 일회성 함수로 간단한 함수(파라미터,리턴)를 함수 선언 없이 사용 가능 > 메모리절약, 가독성증대
-
-    # 함수는 데이터 타입이 function인 변수이다.
-    # function은 코드를 담고 있는 데이터타입이다.
-
-    # lambda 함수 : 간단한 함수를 함수 선언 없이 사용 가능
-
-    # list comprehension : 리스트 컴프리헨션
-    # 간단한 반복문, 조건문을 사용해서 리스트 데이터를 만들때 사용하는 문법
-    # 주로 리스트 데이터를 필터링 하거나 데이터를 변경할때 사용
-    
-    # map()
-    # iterable한 데이터의 모든 value에 특정 함수를 적용한 결과를 리스트로 출력
-
-    # Quiz. map 함수 직접 구현
-    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
-    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
-
-    def map_func():
-        # TODO
-
-    def ages(data):
-        return data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')'
-
-    map_func(ages, names1)
-
-    def ages(*args):
-        return [data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')' for data in args]
-
-    map_func(ages, names1, names2)
-
-    # 답
-    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
-    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
-
-    def map_func(function,*args):
-        return [function(i) for i in args]
-
-    def ages(data):
-        return data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')'
-
-    map_func(ages,*names1)
-
-    names1 = ['kim python(23)', 'lee notebook(32)', 'kim macbook(47)']
-    names2 = ['kim py(33)', 'lee note(52)', 'kim book(87)']
-
-    def map_func(function,*args):
-        return [function(*i) for i in args]
-
-    def ages(*args):
-        return [data[:-3] + str(int(data[-3:-1]) // 10 * 10) + ')' for data in args]
-
-    map_func(ages,names1,names2)
 </pre>
