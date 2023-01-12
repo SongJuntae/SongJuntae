@@ -21,10 +21,10 @@ function fetchListOfPosts(url) {
     fetch(url).then(function (reponse) {
         reponse.json().then(function (text) {
             for (var i in [...Array(text['data'].length).keys()]) {
-                const ol = document.querySelector("ol");
-                const li = document.createElement("li");
-                li.innerHTML = '<a onclick="fetchPost(\'' + text['data'][i]['identifier'] + '\')">' + text['data'][i]['title'] + ' ' + text['data'][i]['creator'] + ' ' + text['data'][i]['date'] + '</a>';
-                ol.appendChild(li);
+                const board = document.querySelector("#board");
+                const tr = document.createElement("tr");
+                tr.innerHTML = '<td>번호</td>' + '<td>'+text['data'][i]['date']+'</td>' + '<td><a onclick="fetchPost(\''+text['data'][i]['title']+'\')">'+text['data'][i]['title']+'</a></td>' + '<td>조회수</td>'+'<td>댓글수</td>';
+                board.appendChild(tr);
             }
         })
     })
