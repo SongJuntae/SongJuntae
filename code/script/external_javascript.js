@@ -23,7 +23,7 @@ function fetchListOfPosts(url) {
             for (var i in [...Array(text['data'].length).keys()]) {
                 const board = document.querySelector("#board");
                 const tr = document.createElement("tr");
-                tr.innerHTML = '<td>번호</td>' + '<td>'+text['data'][i]['date']+'</td>' + '<td><a onclick="fetchPost(\''+text['data'][i]['title']+'\')">'+text['data'][i]['title']+'</a></td>' + '<td>조회수</td>'+'<td>댓글수</td>';
+                tr.innerHTML = '<td>번호</td>' + '<td>'+text['data'][i]['date']+'</td>' + '<td><a onclick="fetchPost(\''+text['data'][i]['identifier']+'\')">'+text['data'][i]['title']+'</a></td>' + '<td>조회수</td>'+'<td>댓글수</td>';
                 board.appendChild(tr);
             }
         })
